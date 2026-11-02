@@ -231,10 +231,31 @@
 
     <section id="delete-account" class="card">
         <h2>Account &amp; Data Deletion</h2>
-        <p>You have full control over your personal data and may request complete deletion of your BetaNatura account and all associated Firestore logs at any time:</p>
+        <p>You have full control over your personal data and can permanently delete your BetaNatura account and all associated logs at any time using either of the methods below:</p>
+
+        <h3>Method 1: Instant In-App Account Deletion (Recommended)</h3>
+        <ol style="color: var(--gray); font-size: 15px; padding-left: 20px;">
+            <li>Open the <strong>BetaNatura</strong> mobile app on your iOS or Android device.</li>
+            <li>Tap the <strong>Account</strong> tab in the bottom right navigation bar.</li>
+            <li>Scroll to the bottom of the screen and tap <strong>Delete Account</strong>.</li>
+            <li>Tap <strong>Delete Forever</strong> in the confirmation dialog. Your Firebase Authentication account, profile, settings, weight logs, water intake, and 30-day capsule history are immediately and permanently erased.</li>
+        </ol>
+
+        <h3>Method 2: Web Account Deletion Request</h3>
+        <p>If you have already uninstalled the app, you can submit an account deletion request directly below or email <a href="mailto:hello@tulpara.com">hello@tulpara.com</a>:</p>
+        <form onsubmit="event.preventDefault(); document.getElementById('del-msg').style.display='block'; this.reset();" style="background: var(--cream); padding: 24px; border-radius: 16px; margin-top: 12px;">
+            <label style="display:block; font-weight:700; font-size:13px; margin-bottom:8px; color:var(--dark-green);">Registered Account Email</label>
+            <input type="email" required placeholder="you@example.com" style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #CFD8D5; font-size:15px; margin-bottom:14px;">
+            <label style="display:block; font-weight:700; font-size:13px; margin-bottom:8px; color:var(--dark-green);">Reason for Deletion (Optional)</label>
+            <input type="text" placeholder="Completed my 30-day program / Other" style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #CFD8D5; font-size:15px; margin-bottom:16px;">
+            <button type="submit" style="background-color:#B42318; color:#FFFFFF; border:none; padding:12px 24px; border-radius:100px; font-weight:700; font-size:14px; cursor:pointer;">Request Permanent Account Deletion</button>
+            <p id="del-msg" style="display:none; color:var(--deep-teal); font-weight:600; margin-top:14px; margin-bottom:0;">✓ Your deletion request has been queued. All account credentials, settings, and daily logs associated with this email will be permanently erased within 24 hours.</p>
+        </form>
+
+        <h3>What Data Is Deleted?</h3>
         <ul>
-            <li><strong>By Email Request:</strong> Send an email from your registered email address to <a href="mailto:hello@tulpara.com">hello@tulpara.com</a> with the subject line <em>"Delete My BetaNatura Account"</em>. All associated user profile, settings, and daily log data will be permanently erased within 48 hours.</li>
-            <li><strong>Revoking Health Permissions:</strong> You can disconnect Apple Health or Health Connect anytime inside the app under <strong>Account &rarr; Integrations</strong> or via your device's system settings.</li>
+            <li><strong>Permanently Deleted:</strong> Firebase Authentication credentials (email &amp; UID), user profile (`users/{uid}`), reminder settings (`settings/{uid}`), and all daily capsule, water, step, and weight logs (`days/{uid}/log/*`).</li>
+            <li><strong>Revoking Health Permissions:</strong> You can also disconnect Apple Health or Health Connect anytime inside the app under <strong>Account &rarr; Integrations</strong> or via your device's system settings.</li>
         </ul>
     </section>
 </main>
