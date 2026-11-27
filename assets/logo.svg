@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" role="img" aria-label="BetaNatura">
-  <rect x="0" y="4" width="84" height="32" rx="8" fill="#0B6B63"/>
-  <text x="42" y="26" text-anchor="middle" font-family="Montserrat, -apple-system, sans-serif" font-weight="700" font-size="19" fill="#FFFFFF" letter-spacing="0.5">Beta</text>
-  <circle cx="84" cy="10" r="3.5" fill="#A7C957"/>
-  <text x="94" y="27" font-family="Georgia, Playfair Display, serif" font-style="italic" font-weight="600" font-size="24" fill="currentColor">Natura</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 48" fill="none">
+  <!-- Official BetaNatura tilted badge for "Beta" -->
+  <path d="M4 9C4 6.2 6.2 4 9 4.2L98 7.5C101 7.6 103 10.2 102.1 13.1L93.5 39.8C92.7 42.3 90.4 44 87.8 44H9C6.2 44 4 41.8 4 39V9Z" fill="#FFE34D" fill-opacity="0.16" stroke="#8CC63F" stroke-width="1.5"/>
+  <!-- Two signature green leaf strokes on top right of badge -->
+  <path d="M77 6.5C82 6.5 87 9.5 93 16.5C95.5 19.5 93 21.5 89 21.2C85 21 79 14.5 74 8.2C73 7 74.5 6.5 77 6.5Z" fill="#8CC63F"/>
+  <path d="M87 5.2C91.5 5.2 96 7.8 101 13.5C103 16 101 17.8 97.5 17.5C94 17.2 89 12 84.5 6.6C83.6 5.6 85 5.2 87 5.2Z" fill="#A3D95B"/>
+  <!-- "Beta" text inside badge -->
+  <text x="14" y="34" fill="#FFFFFF" font-family="Georgia, 'Playfair Display', serif" font-size="30" font-weight="700" letter-spacing="-0.5">Beta</text>
+  <!-- "Natura" italic serif text -->
+  <text x="103" y="35" fill="#9ED65A" font-family="Georgia, 'Playfair Display', serif" font-style="italic" font-size="32" font-weight="700" letter-spacing="-0.5">Natura</text>
 </svg>
