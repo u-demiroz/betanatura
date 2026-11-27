@@ -951,8 +951,8 @@ li {
   block-size: 1.15em;
   flex-shrink: 0;
   background-color: var(--brand-accent);
-  mask: url("/assets/chevron-down.svg") no-repeat center / contain;
-  -webkit-mask: url("/assets/chevron-down.svg") no-repeat center / contain;
+  mask: url("assets/chevron-down.svg") no-repeat center / contain;
+  -webkit-mask: url("assets/chevron-down.svg") no-repeat center / contain;
   rotate: -90deg;
 }
 
