@@ -1,276 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetaNatura — Your Journey. Your Progress.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --deep-teal: #0B6B63;
-            --teal: #0F8F83;
-            --sage-green: #A7C957;
-            --lemon-yellow: #FFE34D;
-            --dark-green: #0E3D34;
-            --cream: #F8F9F5;
-            --gray: #6B7A77;
-            --white: #FFFFFF;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--cream);
-            color: var(--dark-green);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(180deg, var(--deep-teal) 0%, var(--dark-green) 100%);
-            color: var(--white);
-            padding: 64px 20px 56px;
-            text-align: center;
-            border-bottom-left-radius: 36px;
-            border-bottom-right-radius: 36px;
-        }
-        .brand-badge {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(167, 201, 87, 0.45);
-            color: var(--sage-green);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 18px;
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 44px;
-            margin: 0 0 12px;
-            letter-spacing: -0.5px;
-        }
-        header p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 18px;
-            max-width: 540px;
-            margin: 0 auto 28px;
-        }
-        .nav-pills {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .pill-btn {
-            background-color: var(--lemon-yellow);
-            color: var(--dark-green);
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 100px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: transform 0.15s ease;
-        }
-        .pill-btn.secondary {
-            background-color: rgba(255, 255, 255, 0.14);
-            color: var(--white);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-        .pill-btn:hover {
-            transform: translateY(-2px);
-        }
-        main {
-            max-width: 820px;
-            margin: 36px auto 64px;
-            padding: 0 20px;
-        }
-        .card {
-            background-color: var(--white);
-            border-radius: 24px;
-            padding: 36px;
-            margin-bottom: 28px;
-            box-shadow: 0 8px 24px rgba(14, 61, 52, 0.06);
-        }
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            margin-top: 0;
-            margin-bottom: 16px;
-            color: var(--dark-green);
-        }
-        h3 {
-            font-size: 17px;
-            font-weight: 700;
-            margin-top: 24px;
-            margin-bottom: 8px;
-            color: var(--deep-teal);
-        }
-        p, li {
-            color: var(--gray);
-            font-size: 15px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .faq-item {
-            border-bottom: 1px solid #E6ECE9;
-            padding: 16px 0;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .faq-q {
-            font-weight: 700;
-            color: var(--dark-green);
-            margin-bottom: 6px;
-        }
-        .contact-box {
-            background: linear-gradient(135deg, var(--deep-teal), var(--dark-green));
-            color: var(--white);
-            border-radius: 20px;
-            padding: 28px;
-            text-align: center;
-            margin-top: 24px;
-        }
-        .contact-box p {
-            color: rgba(255, 255, 255, 0.85);
-            margin-top: 0;
-        }
-        .contact-box a {
-            display: inline-block;
-            background-color: var(--lemon-yellow);
-            color: var(--dark-green);
-            text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 100px;
-            font-weight: 700;
-            margin-top: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 24px 20px 48px;
-            color: var(--gray);
-            font-size: 13px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>BetaNatura — Your 30-Day Daily Ritual Companion</title>
+  <meta name="description" content="The BetaNatura app helps you keep a daily capsule, water and progress routine over 30 days. Available on iPhone and Android. Official support, privacy policy and account management.">
+  <link rel="canonical" href="https://betanatura.app/">
+
+  <!-- iOS Safari Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=6828905399">
+
+  <!-- Icons & Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Open Graph & Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BetaNatura">
+  <meta property="og:title" content="BetaNatura — Your 30-Day Daily Ritual, Made Simple">
+  <meta property="og:description" content="The BetaNatura app helps you keep a daily capsule, water and progress routine. Download for iOS and Android.">
+  <meta property="og:url" content="https://betanatura.app/">
+  <meta property="og:image" content="https://betanatura.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BetaNatura — Your 30-Day Daily Ritual, Made Simple">
+  <meta name="twitter:description" content="The BetaNatura app helps you keep a daily capsule, water and progress routine. Download for iOS and Android.">
+  <meta name="twitter:image" content="https://betanatura.app/assets/og-image.png">
+
+  <!-- Fonts with font-display: swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- JSON-LD MobileApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "BetaNatura",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "description": "The BetaNatura app helps you keep a daily capsule, water and progress routine over 30 days.",
+    "url": "https://betanatura.app/",
+    "installUrl": [
+      "https://apps.apple.com/us/app/beta-natura/id6828905399",
+      "https://play.google.com/store/apps/details?id=com.betanatura.betanatura"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Demiroz LLC",
+      "url": "https://www.betanatura.com"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-title" class="skip-link visually-hidden">Skip to main content</a>
 
-<header>
-    <div class="brand-badge">Natural Science · Real Results</div>
-    <h1>BetaNatura</h1>
-    <p>Your Journey. Your Progress. Daily ritual tracker for your 30-day BetaNatura GLP-1 Support companion.</p>
-    <div class="nav-pills">
-        <a href="https://apps.apple.com/us/app/beta-natura/id6828905399" target="_blank" rel="noopener" class="pill-btn">Download on the App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.betanatura.betanatura" target="_blank" rel="noopener" class="pill-btn">Get it on Google Play</a>
-        <a href="#support" class="pill-btn secondary">Support &amp; FAQ</a>
-        <a href="#privacy" class="pill-btn secondary">Privacy Policy</a>
-        <a href="#delete-account" class="pill-btn secondary">Account Deletion</a>
+  <!-- 1. Sticky Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="/" class="wordmark-link" aria-label="BetaNatura Home">
+        <span class="wordmark-pill">Beta</span>
+        <span class="wordmark-serif">Natura</span>
+      </a>
+      <nav class="top-bar-nav" aria-label="Primary">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#plans">Plans</a>
+        <a href="#features">Features</a>
+        <a href="#support">Support &amp; FAQ</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#delete-account">Account Deletion</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a href="#get-app" id="top-get-app-btn" class="btn btn-primary">Get the app</a>
+      </div>
     </div>
-</header>
+  </header>
 
-<main>
-    <section id="support" class="card">
-        <h2>App Support &amp; FAQ</h2>
-        <p>Welcome to BetaNatura Support. If you have any questions about your 30-day capsule ritual, hydration tracking, or account management, find quick answers below or reach out to our team directly.</p>
+  <!-- 2. Hero Section -->
+  <section class="hero" id="get-app" aria-labelledby="main-title">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="brand-badge">Natural Science &middot; Your daily ritual companion</div>
+        <h1 id="main-title" tabindex="-1">Your 30-day daily ritual, made simple.</h1>
+        <p class="hero-sub">The BetaNatura app helps you keep a daily capsule, water and progress routine.</p>
 
-        <div class="faq-item">
-            <div class="faq-q">Q: How does Apple Health / Health Connect integration work?</div>
-            <p>BetaNatura optionally reads your daily step count and morning weight from Apple Health (iOS) or Health Connect (Android) to display on your Today and Progress screens. You can enable or disable this anytime under <strong>Account &rarr; Integrations</strong>.</p>
+        <div class="store-badges" data-device="desktop">
+          <a href="https://apps.apple.com/us/app/beta-natura/id6828905399"
+             data-config-href="APP_STORE_URL"
+             class="store-badge-link badge-apple"
+             target="_blank"
+             rel="noopener">
+            <img src="/assets/badge-app-store.svg"
+                 alt="Download on the App Store"
+                 width="160"
+                 height="52">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.betanatura.betanatura"
+             data-config-href="GOOGLE_PLAY_URL"
+             class="store-badge-link badge-google"
+             target="_blank"
+             rel="noopener">
+            <img src="/assets/badge-google-play.svg"
+                 alt="Get it on Google Play"
+                 width="172"
+                 height="52">
+          </a>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-q">Q: How do I customize my daily capsule and water reminders?</div>
-            <p>Open the <strong>Account</strong> tab, enable <strong>Reminders</strong>, and tap on Capsules, Evening Catch-up, or Water Check times to choose the exact hour that fits your routine.</p>
+        <div class="hero-secondary-links">
+          <a href="#how-it-works" class="hero-link">How it works &darr;</a>
+          <a href="#support" class="hero-link" style="color: rgba(255,255,255,0.85); font-weight:600;">Support &amp; FAQ</a>
+          <a href="#privacy" class="hero-link" style="color: rgba(255,255,255,0.85); font-weight:600;">Privacy Policy</a>
+          <a href="#delete-account" class="hero-link" style="color: rgba(255,255,255,0.85); font-weight:600;">Account Deletion</a>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-q">Q: What is the difference between the Standard and Ease-In plans?</div>
-            <p>The <strong>Standard</strong> plan schedules 3 capsules daily from Day 1. The <strong>Ease-In</strong> plan starts with 1 capsule daily for the first 3 days and transitions to 3 capsules daily from Day 4 onward.</p>
+        <!-- Desktop Scan-to-Download QR Codes -->
+        <div class="desktop-qr-band" aria-label="Scan QR codes to download on your phone">
+          <div class="qr-card">
+            <img src="/assets/qr-app-store.svg" alt="QR code for Apple App Store" width="56" height="56" loading="lazy">
+            <div class="qr-card-text">
+              <strong>Scan for iPhone</strong>
+              Apple App Store
+            </div>
+          </div>
+          <div class="qr-card">
+            <img src="/assets/qr-google-play.svg" alt="QR code for Google Play Store" width="56" height="56" loading="lazy">
+            <div class="qr-card-text">
+              <strong>Scan for Android</strong>
+              Google Play Store
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="contact-box">
-            <p>Need personalized assistance with the BetaNatura app?</p>
-            <a href="mailto:hello@tulpara.com">Contact Support (hello@tulpara.com)</a>
+      <div class="phone-mockup-wrap">
+        <div class="phone-frame">
+          <picture>
+            <source srcset="/assets/app-today.webp" type="image/webp">
+            <img src="/assets/app-today.png"
+                 alt="BetaNatura Today screen showing Day 12 of 30, 3 daily capsule slots, water intake and step tracking"
+                 width="1170"
+                 height="2532"
+                 fetchpriority="high">
+          </picture>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <!-- 3. How It Works (3 Steps) -->
+    <section id="how-it-works" class="section-block reveal-on-scroll" aria-labelledby="how-heading">
+      <div class="section-header">
+        <span class="section-eyebrow">Getting Started</span>
+        <h2 id="how-heading">How it works</h2>
+      </div>
+      <ol class="steps-grid">
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Scan the QR on your bottle</h3>
+          <p>Download the BetaNatura companion app on iPhone or Android and create your account in seconds.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Pick your plan (Standard or Ease-In)</h3>
+          <p>Choose the daily capsule schedule that fits your comfort level for your 30-day bottle.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Follow your daily reminders and log your progress</h3>
+          <p>Check off your daily capsules and water intake, and view your 30-day consistency calendar.</p>
+        </li>
+      </ol>
     </section>
 
-    <section id="privacy" class="card">
-        <h2>Privacy Policy</h2>
-        <p><strong>Last Updated:</strong> October 2026</p>
-        <p>BetaNatura ("we", "our", or "us") respects your privacy and is committed to protecting your personal and wellness data. This Privacy Policy explains how our mobile application collects, uses, and safeguards your information.</p>
+    <!-- 4. Plans (Standard vs Ease-In) -->
+    <section id="plans" class="section-block reveal-on-scroll" aria-labelledby="plans-heading">
+      <div class="section-header">
+        <span class="section-eyebrow">Your Schedule</span>
+        <h2 id="plans-heading">Two flexible 30-day plans</h2>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card plan-featured">
+          <span class="plan-tag">Standard Plan</span>
+          <h3>Standard</h3>
+          <p><strong>3 capsules daily from Day 1.</strong> Designed for users ready to begin the full daily serving right away.</p>
+        </div>
+        <div class="plan-card">
+          <span class="plan-tag">Gentle Start</span>
+          <h3>Ease-In</h3>
+          <p><strong>1 capsule for 3 days, then 3 capsules daily from Day 4.</strong> A gradual introduction for the first three days of your routine.</p>
+        </div>
+      </div>
+      <p class="plans-note">Follow the directions on your bottle.</p>
+    </section>
 
-        <h3>1. Information We Collect</h3>
+    <!-- 5. App Features (4 Cards) -->
+    <section id="features" class="section-block reveal-on-scroll" aria-labelledby="features-heading">
+      <div class="section-header">
+        <span class="section-eyebrow">Built for Consistency</span>
+        <h2 id="features-heading">Everything you need for your daily routine</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3>Daily capsule reminders</h3>
+          <p>Set quiet morning and evening catch-up notifications at the exact hours that match your daily schedule, plus a 30-minute meal timer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3>Water check-ins</h3>
+          <p>Log glasses of water with one tap throughout the day and schedule a dedicated afternoon hydration check reminder.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Optional Apple Health / Health Connect</h3>
+          <p>Syncs steps and morning weight only, strictly read-only. You are always in control and can turn it off anytime in Account settings.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Progress view over 30 days</h3>
+          <p>Review your 30-day capsule calendar, daily hydration logs, and optional weight chart across weekly, monthly, and 3-month views.</p>
+        </div>
+      </div>
+
+      <div class="screenshots-strip">
+        <div class="shot-card">
+          <div class="phone-frame">
+            <picture>
+              <source srcset="/assets/app-today.webp" type="image/webp">
+              <img src="/assets/app-today.png" alt="Today tab showing daily capsule and water tracking" width="1170" height="2532" loading="lazy">
+            </picture>
+          </div>
+          <p class="shot-caption">Today &middot; Daily Capsules &amp; Hydration</p>
+        </div>
+        <div class="shot-card">
+          <div class="phone-frame">
+            <picture>
+              <source srcset="/assets/app-progress.webp" type="image/webp">
+              <img src="/assets/app-progress.png" alt="Progress tab showing 30-day calendar and weight chart" width="1170" height="2532" loading="lazy">
+            </picture>
+          </div>
+          <p class="shot-caption">Progress &middot; 30-Day Calendar &amp; Chart</p>
+        </div>
+        <div class="shot-card">
+          <div class="phone-frame">
+            <picture>
+              <source srcset="/assets/app-refill.webp" type="image/webp">
+              <img src="/assets/app-refill.png" alt="Welcome and bottle progress view" width="1170" height="2532" loading="lazy">
+            </picture>
+          </div>
+          <p class="shot-caption">Companion &middot; Simple 30-Day Routine</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Your Data (Short Summary) -->
+    <section id="your-data" class="section-block reveal-on-scroll" aria-labelledby="data-heading">
+      <div class="card">
+        <span class="section-eyebrow">Privacy by Design</span>
+        <h2 id="data-heading">Your data stays yours</h2>
         <ul>
+          <li><strong>Account info via Firebase Authentication:</strong> Only your first name, email address, and encrypted login credentials are used to secure your account.</li>
+          <li><strong>Progress logs you enter:</strong> Your daily capsule counts, water intake, and optional weight entries are stored solely to power your in-app 30-day calendar.</li>
+          <li><strong>Health data only with your permission:</strong> Optional read-only access limited strictly to daily step count and morning weight—never sold, shared, or used for advertising.</li>
+        </ul>
+        <p style="margin-bottom:0;">
+          <a href="#privacy" style="color: var(--brand-accent); font-weight:700;">Read the full Privacy Policy &darr;</a>
+          &nbsp;&middot;&nbsp;
+          <a href="/privacy/" style="color: var(--brand-accent); font-weight:600;">Open standalone Privacy page &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. About the Capsules (Compact Band) -->
+    <section id="about-capsules" class="section-block reveal-on-scroll" aria-labelledby="capsules-heading">
+      <div class="capsules-band">
+        <div>
+          <span class="brand-badge" style="margin-bottom:10px;">Official Storefronts</span>
+          <h2 id="capsules-heading">BetaNatura dietary supplement</h2>
+          <p>Running low on your current 30-day bottle of <span data-config-text="PRODUCT_NAME">BetaNatura GLP-1 Support</span>? Order your next bottle from our official store or Amazon.</p>
+          <p style="font-size:0.84rem; opacity:0.8; margin-top:8px;">Supplement Facts and directions are on your bottle.</p>
+        </div>
+        <div class="capsules-band-actions">
+          <a href="https://www.betanatura.com" data-config-href="SHOP_URL" target="_blank" rel="noopener" class="btn btn-primary">Shop at betanatura.com</a>
+          <a href="https://www.amazon.com/dp/B07PJW4RJH" data-config-href="AMAZON_URL" target="_blank" rel="noopener" class="btn btn-secondary">View on Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Support & FAQ Accordion -->
+    <section id="support" class="section-block reveal-on-scroll" aria-labelledby="support-heading">
+      <div class="card accordion">
+        <span class="section-eyebrow">Help Center</span>
+        <h2 id="support-heading">App Support &amp; FAQ</h2>
+        <p>Welcome to BetaNatura Support. If you have any questions about your 30-day capsule ritual, hydration tracking, or account management, find quick answers below or reach out to our team directly.</p>
+
+        <details open>
+          <summary>Q: How does Apple Health / Health Connect integration work?</summary>
+          <div class="faq-answer">
+            <p>BetaNatura optionally reads your daily step count and morning weight from Apple Health (iOS) or Health Connect (Android), read-only, to display on your Today and Progress screens. You can enable or disable this anytime under <strong>Account &rarr; Integrations</strong>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Q: How do I customize my daily capsule and water reminders?</summary>
+          <div class="faq-answer">
+            <p>Open the <strong>Account</strong> tab, enable <strong>Reminders</strong>, and tap on Capsules, Evening Catch-up, or Water Check times to choose the exact hour that fits your routine.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Q: What is the difference between the Standard and Ease-In plans?</summary>
+          <div class="faq-answer">
+            <p>The <strong>Standard</strong> plan schedules 3 capsules daily from Day 1. The <strong>Ease-In</strong> plan starts with 1 capsule daily for the first 3 days and transitions to 3 capsules daily from Day 4 onward.</p>
+          </div>
+        </details>
+
+        <div class="contact-box">
+          <p>Need personalized assistance with the BetaNatura app?</p>
+          <a href="mailto:hello@tulpara.com" data-config-email="button" class="btn btn-primary">Contact Support (hello@tulpara.com)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Optional Newsletter (Hidden by default behind ENABLE_EMAIL_CAPTURE = false) -->
+    <section id="newsletter" class="section-block" aria-labelledby="newsletter-heading" hidden>
+      <div class="card">
+        <span class="section-eyebrow">Updates</span>
+        <h2 id="newsletter-heading">Routine tips &amp; refill reminders</h2>
+        <p>Sign up to receive occasional product updates from BetaNatura. You can unsubscribe at any time.</p>
+        <form id="newsletter-form" class="bn-form" action="#">
+          <div class="form-field">
+            <label for="newsletter-email" class="form-label">Email Address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="form-input">
+          </div>
+          <div class="form-field" style="display:flex; align-items:flex-start; gap:10px;">
+            <input id="newsletter-consent" name="consent" type="checkbox" required style="min-block-size:20px; margin-top:4px;">
+            <label for="newsletter-consent" style="font-size:0.88rem; color:var(--text-secondary);">I agree to receive email updates from BetaNatura in accordance with the Privacy Policy.</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p id="newsletter-status" class="form-status" role="status" aria-live="polite" hidden>Thank you for subscribing.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 10A. Privacy Policy (Verbatim Legal Text, Restyled with Table of Contents) -->
+    <section id="privacy" class="section-block reveal-on-scroll" aria-labelledby="privacy-heading">
+      <div class="card legal-card">
+        <div class="legal-prose">
+          <span class="section-eyebrow">Legal &amp; Compliance</span>
+          <h2 id="privacy-heading">Privacy Policy</h2>
+          <p><strong>Last Updated:</strong> October 2026</p>
+
+          <nav class="legal-toc" aria-label="Privacy Policy table of contents">
+            <p class="legal-toc-title">Contents</p>
+            <ol>
+              <li><a href="#privacy-collect">1. Information We Collect</a></li>
+              <li><a href="#privacy-use">2. How We Use Your Data</a></li>
+              <li><a href="#privacy-storage">3. Data Storage &amp; Security</a></li>
+            </ol>
+          </nav>
+
+          <p>BetaNatura ("we", "our", or "us") respects your privacy and is committed to protecting your personal and wellness data. This Privacy Policy explains how our mobile application collects, uses, and safeguards your information.</p>
+
+          <h3 id="privacy-collect">1. Information We Collect</h3>
+          <ul>
             <li><strong>Account Information:</strong> When you create an account, we collect your first name, email address, and encrypted authentication credentials via Firebase Authentication.</li>
             <li><strong>Daily Ritual &amp; Progress Logs:</strong> Capsule intake counts, daily water intake, and weight logs that you enter to track your 30-day progress.</li>
             <li><strong>Health Data (Apple HealthKit &amp; Google Health Connect):</strong> With your explicit permission via the in-app toggle, BetaNatura requests <strong>read-only</strong> access strictly limited to:
-                <ul>
-                    <li><strong>Steps</strong> (today's step count)</li>
-                    <li><strong>Weight / Body Mass</strong> (most recent morning weight reading)</li>
-                </ul>
-                We do <strong>not</strong> access workouts, heart rate, sleep, nutrition, clinical records, or any other health metrics.
+              <ul>
+                <li><strong>Steps</strong> (today's step count)</li>
+                <li><strong>Weight / Body Mass</strong> (most recent morning weight reading)</li>
+              </ul>
+              We do <strong>not</strong> access workouts, heart rate, sleep, nutrition, clinical records, or any other health metrics.
             </li>
             <li><strong>Diagnostics &amp; Analytics:</strong> Anonymous crash reports and app performance telemetry (via Firebase Crashlytics / Analytics and AppMetrica) to improve app stability.</li>
-        </ul>
+          </ul>
 
-        <h3>2. How We Use Your Data</h3>
-        <p>Your data is used solely to display your 30-day capsule journey, hydration, step count, and weight progress chart inside the BetaNatura app. <strong>Health data read from Apple HealthKit or Google Health Connect is never used for advertising, marketing, or data brokering, and is never sold or shared with third parties.</strong></p>
+          <h3 id="privacy-use">2. How We Use Your Data</h3>
+          <p>Your data is used solely to display your 30-day capsule journey, hydration, step count, and weight progress chart inside the BetaNatura app. <strong>Health data read from Apple HealthKit or Google Health Connect is never used for advertising, marketing, or data brokering, and is never sold or shared with third parties.</strong></p>
 
-        <h3>3. Data Storage &amp; Security</h3>
-        <p>Your account and progress records are transmitted over encrypted connections (HTTPS/TLS) and stored securely in Google Cloud Firestore.</p>
+          <h3 id="privacy-storage">3. Data Storage &amp; Security</h3>
+          <p>Your account and progress records are transmitted over encrypted connections (HTTPS/TLS) and stored securely in Google Cloud Firestore.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="delete-account" class="card">
-        <h2>Account &amp; Data Deletion</h2>
-        <p>You have full control over your personal data and can permanently delete your BetaNatura account and all associated logs at any time using either of the methods below:</p>
+    <!-- 10B. Account & Data Deletion (Verbatim Legal Text, Restyled with Table of Contents) -->
+    <section id="delete-account" class="section-block reveal-on-scroll" aria-labelledby="delete-heading">
+      <div class="card legal-card">
+        <div class="legal-prose">
+          <span class="section-eyebrow">Data Control</span>
+          <h2 id="delete-heading">Account &amp; Data Deletion</h2>
 
-        <h3>Method 1: Instant In-App Account Deletion (Recommended)</h3>
-        <ol style="color: var(--gray); font-size: 15px; padding-left: 20px;">
+          <nav class="legal-toc" aria-label="Account Deletion table of contents">
+            <p class="legal-toc-title">Contents</p>
+            <ol>
+              <li><a href="#del-method-1">Method 1: Instant In-App Account Deletion (Recommended)</a></li>
+              <li><a href="#del-method-2">Method 2: Web Account Deletion Request</a></li>
+              <li><a href="#del-what">What Data Is Deleted?</a></li>
+            </ol>
+          </nav>
+
+          <p>You have full control over your personal data and can permanently delete your BetaNatura account and all associated logs at any time using either of the methods below:</p>
+
+          <h3 id="del-method-1">Method 1: Instant In-App Account Deletion (Recommended)</h3>
+          <ol>
             <li>Open the <strong>BetaNatura</strong> mobile app on your iOS or Android device.</li>
             <li>Tap the <strong>Account</strong> tab in the bottom right navigation bar.</li>
             <li>Scroll to the bottom of the screen and tap <strong>Delete Account</strong>.</li>
             <li>Tap <strong>Delete Forever</strong> in the confirmation dialog. Your Firebase Authentication account, profile, settings, weight logs, water intake, and 30-day capsule history are immediately and permanently erased.</li>
-        </ol>
+          </ol>
 
-        <h3>Method 2: Web Account Deletion Request</h3>
-        <p>If you have already uninstalled the app, you can submit an account deletion request directly below or email <a href="mailto:hello@tulpara.com">hello@tulpara.com</a>:</p>
-        <form onsubmit="event.preventDefault(); document.getElementById('del-msg').style.display='block'; this.reset();" style="background: var(--cream); padding: 24px; border-radius: 16px; margin-top: 12px;">
-            <label style="display:block; font-weight:700; font-size:13px; margin-bottom:8px; color:var(--dark-green);">Registered Account Email</label>
-            <input type="email" required placeholder="you@example.com" style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #CFD8D5; font-size:15px; margin-bottom:14px;">
-            <label style="display:block; font-weight:700; font-size:13px; margin-bottom:8px; color:var(--dark-green);">Reason for Deletion (Optional)</label>
-            <input type="text" placeholder="Completed my 30-day program / Other" style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #CFD8D5; font-size:15px; margin-bottom:16px;">
-            <button type="submit" style="background-color:#B42318; color:#FFFFFF; border:none; padding:12px 24px; border-radius:100px; font-weight:700; font-size:14px; cursor:pointer;">Request Permanent Account Deletion</button>
-            <p id="del-msg" style="display:none; color:var(--deep-teal); font-weight:600; margin-top:14px; margin-bottom:0;">✓ Your deletion request has been queued. All account credentials, settings, and daily logs associated with this email will be permanently erased within 24 hours.</p>
-        </form>
+          <h3 id="del-method-2">Method 2: Web Account Deletion Request</h3>
+          <p>If you have already uninstalled the app, you can submit an account deletion request directly below or email <a href="mailto:hello@tulpara.com" data-config-email="text">hello@tulpara.com</a>:</p>
+          <form id="delete-account-form" class="bn-form">
+            <div class="form-field">
+              <label for="del-email" class="form-label">Registered Account Email</label>
+              <input id="del-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="form-input">
+            </div>
+            <div class="form-field">
+              <label for="del-reason" class="form-label">Reason for Deletion (Optional)</label>
+              <input id="del-reason" name="reason" type="text" placeholder="Completed my 30-day program / Other" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-danger">Request Permanent Account Deletion</button>
+            <p id="del-msg" class="form-status" role="status" aria-live="polite" style="display:none;">✓ Your deletion request has been queued. All account credentials, settings, and daily logs associated with this email will be permanently erased within 24 hours.</p>
+          </form>
 
-        <h3>What Data Is Deleted?</h3>
-        <ul>
-            <li><strong>Permanently Deleted:</strong> Firebase Authentication credentials (email &amp; UID), user profile (`users/{uid}`), reminder settings (`settings/{uid}`), and all daily capsule, water, step, and weight logs (`days/{uid}/log/*`).</li>
+          <h3 id="del-what">What Data Is Deleted?</h3>
+          <ul>
+            <li><strong>Permanently Deleted:</strong> Firebase Authentication credentials (email &amp; UID), user profile (<code>users/{uid}</code>), reminder settings (<code>settings/{uid}</code>), and all daily capsule, water, step, and weight logs (<code>days/{uid}/log/*</code>).</li>
             <li><strong>Revoking Health Permissions:</strong> You can also disconnect Apple Health or Health Connect anytime inside the app under <strong>Account &rarr; Integrations</strong> or via your device's system settings.</li>
-        </ul>
+          </ul>
+        </div>
+      </div>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>
-        <a href="https://apps.apple.com/us/app/beta-natura/id6828905399" target="_blank" rel="noopener" style="color: var(--deep-teal); font-weight: 700; text-decoration: none; margin: 0 10px;">Download on the App Store &rarr;</a>
-        &middot;
-        <a href="https://play.google.com/store/apps/details?id=com.betanatura.betanatura" target="_blank" rel="noopener" style="color: var(--deep-teal); font-weight: 700; text-decoration: none; margin: 0 10px;">Get it on Google Play &rarr;</a>
-    </p>
-    <p>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-    <p>&copy; 2026 BetaNatura. All rights reserved.</p>
-</footer>
+  <!-- 11. Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="/" class="wordmark-link" aria-label="BetaNatura Home">
+          <span class="wordmark-pill">Beta</span>
+          <span class="wordmark-serif">Natura</span>
+        </a>
+        <div class="store-badges" data-device="desktop" style="margin-bottom:0;">
+          <a href="https://apps.apple.com/us/app/beta-natura/id6828905399"
+             data-config-href="APP_STORE_URL"
+             class="store-badge-link badge-apple"
+             target="_blank"
+             rel="noopener">
+            <img src="/assets/badge-app-store.svg" alt="Download on the App Store" width="144" height="47" loading="lazy">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.betanatura.betanatura"
+             data-config-href="GOOGLE_PLAY_URL"
+             class="store-badge-link badge-google"
+             target="_blank"
+             rel="noopener">
+            <img src="/assets/badge-google-play.svg" alt="Get it on Google Play" width="155" height="47" loading="lazy">
+          </a>
+        </div>
+      </div>
 
+      <ul class="footer-links" role="list">
+        <li><a href="/support/">Support &amp; FAQ</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/delete-account/">Account Deletion</a></li>
+        <li><a href="https://www.betanatura.com" data-config-href="SHOP_URL" target="_blank" rel="noopener">Shop betanatura.com</a></li>
+        <li><a href="https://www.amazon.com/dp/B07PJW4RJH" data-config-href="AMAZON_URL" target="_blank" rel="noopener">Amazon Storefront</a></li>
+        <li><a href="mailto:hello@tulpara.com" data-config-email="text">hello@tulpara.com</a></li>
+      </ul>
+
+      <p class="fda-disclaimer">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Talk with your healthcare provider before use if you are pregnant, nursing, taking medication or managing a health condition.</p>
+
+      <p class="footer-meta">&copy; 2026 BetaNatura &middot; Demiroz LLC<span data-config-text="COMPANY_ADDRESS" hidden></span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
 </body>
 </html>

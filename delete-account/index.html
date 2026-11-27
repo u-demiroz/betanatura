@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Account &amp; Data Deletion | BetaNatura</title>
+  <meta name="description" content="Permanently delete your BetaNatura account and associated data in-app or via our web deletion request form.">
+  <link rel="canonical" href="https://betanatura.app/delete-account/">
+  <meta name="apple-itunes-app" content="app-id=6828905399">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Account &amp; Data Deletion | BetaNatura">
+  <meta property="og:description" content="Permanently delete your BetaNatura account and associated data.">
+  <meta property="og:url" content="https://betanatura.app/delete-account/">
+  <meta property="og:image" content="https://betanatura.app/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a href="#main-title" class="skip-link visually-hidden">Skip to main content</a>
+
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="/" class="wordmark-link" aria-label="BetaNatura Home">
+        <span class="wordmark-pill">Beta</span>
+        <span class="wordmark-serif">Natura</span>
+      </a>
+      <nav class="top-bar-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/support/">Support &amp; FAQ</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/delete-account/" aria-current="page">Account Deletion</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a href="/#get-app" id="top-get-app-btn" class="btn btn-primary">Get the app</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="delete-account" class="section-block" aria-labelledby="main-title">
+      <div class="card legal-card">
+        <div class="legal-prose">
+          <span class="section-eyebrow">Data Control</span>
+          <h1 id="main-title" tabindex="-1" style="font-family:var(--font-serif); font-size:clamp(1.85rem,3.5vw,2.4rem); margin:0 0 12px;">Account &amp; Data Deletion</h1>
+
+          <nav class="legal-toc" aria-label="Account Deletion table of contents">
+            <p class="legal-toc-title">Contents</p>
+            <ol>
+              <li><a href="#del-method-1">Method 1: Instant In-App Account Deletion (Recommended)</a></li>
+              <li><a href="#del-method-2">Method 2: Web Account Deletion Request</a></li>
+              <li><a href="#del-what">What Data Is Deleted?</a></li>
+            </ol>
+          </nav>
+
+          <p>You have full control over your personal data and can permanently delete your BetaNatura account and all associated logs at any time using either of the methods below:</p>
+
+          <h2 id="del-method-1" style="font-size:1.25rem; margin-top:24px;">Method 1: Instant In-App Account Deletion (Recommended)</h2>
+          <ol>
+            <li>Open the <strong>BetaNatura</strong> mobile app on your iOS or Android device.</li>
+            <li>Tap the <strong>Account</strong> tab in the bottom right navigation bar.</li>
+            <li>Scroll to the bottom of the screen and tap <strong>Delete Account</strong>.</li>
+            <li>Tap <strong>Delete Forever</strong> in the confirmation dialog. Your Firebase Authentication account, profile, settings, weight logs, water intake, and 30-day capsule history are immediately and permanently erased.</li>
+          </ol>
+
+          <h2 id="del-method-2" style="font-size:1.25rem; margin-top:24px;">Method 2: Web Account Deletion Request</h2>
+          <p>If you have already uninstalled the app, you can submit an account deletion request directly below or email <a href="mailto:hello@tulpara.com" data-config-email="text">hello@tulpara.com</a>:</p>
+          <form id="delete-account-form" class="bn-form">
+            <div class="form-field">
+              <label for="del-email" class="form-label">Registered Account Email</label>
+              <input id="del-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="form-input">
+            </div>
+            <div class="form-field">
+              <label for="del-reason" class="form-label">Reason for Deletion (Optional)</label>
+              <input id="del-reason" name="reason" type="text" placeholder="Completed my 30-day program / Other" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-danger">Request Permanent Account Deletion</button>
+            <p id="del-msg" class="form-status" role="status" aria-live="polite" style="display:none;">✓ Your deletion request has been queued. All account credentials, settings, and daily logs associated with this email will be permanently erased within 24 hours.</p>
+          </form>
+
+          <h2 id="del-what" style="font-size:1.25rem; margin-top:24px;">What Data Is Deleted?</h2>
+          <ul>
+            <li><strong>Permanently Deleted:</strong> Firebase Authentication credentials (email &amp; UID), user profile (<code>users/{uid}</code>), reminder settings (<code>settings/{uid}</code>), and all daily capsule, water, step, and weight logs (<code>days/{uid}/log/*</code>).</li>
+            <li><strong>Revoking Health Permissions:</strong> You can also disconnect Apple Health or Health Connect anytime inside the app under <strong>Account &rarr; Integrations</strong> or via your device's system settings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="/" class="wordmark-link" aria-label="BetaNatura Home">
+          <span class="wordmark-pill">Beta</span>
+          <span class="wordmark-serif">Natura</span>
+        </a>
+        <div class="store-badges" data-device="desktop" style="margin-bottom:0;">
+          <a href="https://apps.apple.com/us/app/beta-natura/id6828905399" data-config-href="APP_STORE_URL" class="store-badge-link badge-apple" target="_blank" rel="noopener">
+            <img src="/assets/badge-app-store.svg" alt="Download on the App Store" width="144" height="47" loading="lazy">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.betanatura.betanatura" data-config-href="GOOGLE_PLAY_URL" class="store-badge-link badge-google" target="_blank" rel="noopener">
+            <img src="/assets/badge-google-play.svg" alt="Get it on Google Play" width="155" height="47" loading="lazy">
+          </a>
+        </div>
+      </div>
+      <ul class="footer-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/support/">Support &amp; FAQ</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/delete-account/">Account Deletion</a></li>
+        <li><a href="mailto:hello@tulpara.com" data-config-email="text">hello@tulpara.com</a></li>
+      </ul>
+      <p class="fda-disclaimer">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Talk with your healthcare provider before use if you are pregnant, nursing, taking medication or managing a health condition.</p>
+      <p class="footer-meta">&copy; 2026 BetaNatura &middot; Demiroz LLC<span data-config-text="COMPANY_ADDRESS" hidden></span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

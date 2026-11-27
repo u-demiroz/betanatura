@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" role="img" aria-label="BetaNatura">
+  <rect x="0" y="4" width="84" height="32" rx="8" fill="#0B6B63"/>
+  <text x="42" y="26" text-anchor="middle" font-family="Montserrat, -apple-system, sans-serif" font-weight="700" font-size="19" fill="#FFFFFF" letter-spacing="0.5">Beta</text>
+  <circle cx="84" cy="10" r="3.5" fill="#A7C957"/>
+  <text x="94" y="27" font-family="Georgia, Playfair Display, serif" font-style="italic" font-weight="600" font-size="24" fill="currentColor">Natura</text>
+</svg>
