@@ -55,7 +55,7 @@ All URLs, contact emails, company details, and feature flags are centralized in 
 
 ```javascript
 window.BETANATURA_CONFIG = {
-  SUPPORT_EMAIL: "hello@tulpara.com",
+  SUPPORT_EMAIL: "info@betanatura.com",
   PRODUCT_NAME: "BetaNatura GLP-1 Support",
   APP_STORE_URL: "https://apps.apple.com/us/app/beta-natura/id6828905399",
   GOOGLE_PLAY_URL: "https://play.google.com/store/apps/details?id=com.betanatura.betanatura",
@@ -116,7 +116,7 @@ firebase deploy --only hosting --project betanatura-ed1a1
 
 The site ships with production-ready UI screenshots (`1170×2532` WebP & PNG) matching the real BetaNatura app UI, real App Store & Google Play links, and real Amazon/Shop links. If the brand team wants to customize further in the future, review these optional items:
 
-- [ ] **Support Email Domain (`config.js` → `SUPPORT_EMAIL`)**: Currently set to `hello@tulpara.com` (matching the verbatim Privacy Policy and Account Deletion text). Update to a `@betanatura.com` address in `config.js` if desired.
+- [ ] **Support Email Domain (`config.js` → `SUPPORT_EMAIL`)**: Currently set to `info@betanatura.com` (matching the verbatim Privacy Policy and Account Deletion text). Update to a `@betanatura.com` address in `config.js` if desired.
 - [ ] **Company Mailing Address (`config.js` → `COMPANY_ADDRESS`)**: Currently set to `"United States"` under `Demiroz LLC`. Replace with a full street/suite address if needed for footer display.
 - [ ] **Optional High-Resolution Bottle Studio Photo**: Section 5 ("Inside Your Bottle") currently uses a clean botanical capsule illustration card and ingredient grid. If a studio bottle PNG/WebP cutout is available, it can be dropped into `docs/assets/` and referenced in Section 5.
 - [ ] **Optional Email Marketing Integration (`config.js` → `ENABLE_EMAIL_CAPTURE`)**: When ready to collect email leads for the 30-day GLP-1 habit guide, set `ENABLE_EMAIL_CAPTURE: true` in `config.js` and wire the form submission in `app.js` (`initEmailCaptureForm`) to your ESP endpoint.
